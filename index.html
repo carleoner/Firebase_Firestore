@@ -3,13 +3,39 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- https://github.com/iamshaunjp/firebase-firestore-playlist/tree/master -->
+
     <h1>Cloud Cafe</h1>
+
+    <!-- test -->
 
     <div class="content">
       <form id="add-cafe-form"></form>
 
       <ul id="cafe-list"></ul>
     </div>
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBliqgijbyAyvwKc_1Xo6200tlEp7yuIG0",
+        authDomain: "firestore-tutorial-881f6.firebaseapp.com",
+        projectId: "firestore-tutorial-881f6",
+        storageBucket: "firestore-tutorial-881f6.appspot.com",
+        messagingSenderId: "101201196956",
+        appId: "1:101201196956:web:fac557bf30dddde9227a59",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+      db.settings({ timestapsInSnapshots: true });
+    </script>
 
     <script src="app.js"></script>
   </body>
