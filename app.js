@@ -30,6 +30,8 @@ function renderCafe(doc) {
 
 // getting data
 db.collection("cafes")
+  .where("city", "==", "London")
+  //.orderBy("name")
   .get()
   .then((snapshot) => {
     snapshot.docs.forEach((doc) => {
